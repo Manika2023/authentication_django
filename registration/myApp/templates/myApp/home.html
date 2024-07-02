@@ -1,0 +1,15 @@
+{% extends "myApp/base.html" %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+<h2>Welcome to the hello page</h2>
+
+{% if user.is_authenticated %}
+<p>Hello, {{user.username}}</p>
+
+{%else %}
+<p>
+     Please register if you have done this process then please login !
+</p>
+{%endif %}
+{% endblock body %}

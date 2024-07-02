@@ -1,0 +1,37 @@
+{% extends "myApp/base.html" %}
+{% block title %}Registration{% endblock title %}
+
+{% load static %}
+
+{% block body %}
+<style>
+
+.card {
+    max-height: 30vh; 
+    border: none; /* Remove card border */
+}
+
+</style>
+{% comment %} this is message block {% endcomment %}
+{% if messages %}
+{% for message in messages %}
+<p {% if message.tags %} class="alert alert-{{message.tags}} mb-5 " {% endif %}>{{message}}</p>
+{% endfor %}
+{% endif %}
+
+<h1 class="text-primary text-center">register</h1>
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 10vh;">
+     <div class="card p-4" style="max-width: 400px; width: 100%;">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" class="logo mx-auto mb-4">
+         <div class="form-container">
+             <form action="" method="post">
+                 {% csrf_token %}
+                 {{ form.as_p }}
+                 <button type="submit" class="btn btn-primary btn-block">Register</button>
+             </form>
+         </div>
+     </div>
+ </div>
+{% endblock body %}
+
+ 

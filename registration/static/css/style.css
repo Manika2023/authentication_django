@@ -1,0 +1,29 @@
+h1{
+     color: aqua;
+}
+p{
+     color: green;
+}
+
+
+.errorlist li{
+          list-style: none;
+          color:red;
+     }
+.logo {
+          width: 100px;
+          height: 100px;
+          border: none;
+      }
+.card {
+          max-height: 30vh; 
+          border: none; /* Remove card border */
+      }
+.form-container {
+          border: 2px solid #ddd; /* Add border to form */
+          padding: 20px;
+          border-radius: 5px;
+      }
+.form-control {
+          font-size: 0.8rem; /* Smaller font size for form fields */
+      }
